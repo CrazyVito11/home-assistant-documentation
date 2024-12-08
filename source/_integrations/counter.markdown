@@ -62,13 +62,18 @@ counter:
       type: integer
       default: 1
     minimum:
-      description: Minimum value the counter will have
+      description: Minimum value the counter will have. Required if `wrap_around` is `true`.
       required: false
       type: integer
     maximum:
-      description: Maximum value the counter will have
+      description: Maximum value the counter will have. Required if `wrap_around` is `true`.
       required: false
       type: integer
+    wrap_around:
+      description: Should the value wrap around once it reaches the maximum or minimum value
+      required: false
+      type: boolean
+      default: false
     icon:
       description: Icon to display for the counter.
       required: false
